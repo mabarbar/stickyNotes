@@ -6,6 +6,7 @@
 }
 
 body {
+  position: relative;
   background-color: white;
   font-family: "Nunito", sans-serif;
 }
@@ -28,10 +29,103 @@ body {
   font-weight: 600;
   padding: 1em;
   background: white;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .btn-area button:hover {
-  background: #e6e6e6;
+  background: black;
+  color: #eee;
+}
+
+.app-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.notes-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  min-height: 200px;
+  background: yellow;
+  -webkit-box-shadow: #e6e61a 20px 30px;
+          box-shadow: #e6e61a 20px 30px;
+  margin: 2em;
+}
+
+.noteHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px dotted black;
+}
+
+.noteHeader button {
+  font-size: 1rem;
+  background: none;
+  border: none;
+}
+
+.noteHeader button:hover {
+  font-size: 1.1rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.noteContent {
+  width: 168px;
+  word-wrap: break-word;
+  margin: 1em 1em 1em 1em;
+}
+
+.note-menu-section {
+  position: absolute;
+  top: 2em;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  padding: 1em;
+  border: 2px black solid;
+  background: white;
+  -webkit-transition: display .4s, -webkit-transform .4s;
+  transition: display .4s, -webkit-transform .4s;
+  transition: transform .4s, display .4s;
+  transition: transform .4s, display .4s, -webkit-transform .4s;
+}
+
+#noteText {
+  height: 250px;
+}
+
+.active {
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

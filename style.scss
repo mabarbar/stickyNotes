@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   background-color: hsl(0, 0%, 100%);
   font-family: "Nunito", sans-serif;
 }
@@ -21,9 +22,86 @@ body {
   font-weight: 600;
   padding: 1em;
   background: hsl(0, 0%, 100%);
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .btn-area button:hover {
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 0%);
+  color: #eee;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+.app-body {
+  display: flex;
+  position: relative;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+.notes-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  min-height: 200px;
+  background: yellow;
+  box-shadow: hsl(60, 80%, 50%) 20px 30px;
+  margin: 2em;
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px dotted black;
+  // border: 1px solid red;
+}
+
+.noteHeader button {
+  font-size: 1rem;
+  background: none;
+  border: none;
+}
+
+.noteHeader button:hover {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 100%);
+  background: none;
+  border: none;
+}
+
+.noteContent {
+  width: 168px;
+  word-wrap: break-word;
+  margin: 1em 1em 1em 1em;
+  // margin-right: 1em;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+.note-menu-section {
+  position: absolute;
+  top: 2em;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 1em;
+  border: 2px hsl(0, 0, 0) solid;
+  background: hsl(0, 0, 100);
+  transition: transform .4s, display .4s;
+}
+
+#noteText {
+  height: 250px;
+}
+
+.active {
+  transform: translateX(400px);
+  display: none;
 }

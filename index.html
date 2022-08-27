@@ -21,44 +21,59 @@
     <section class="menu-section">
       <h1 class="logo"><i class="fa-solid fa-note-sticky"></i>MyNotes</h1>
       <div class="btn-area">
-        <button><i class="fa-regular fa-plus"></i> Add</button>
-        <button><i class="fa-regular fa-trash-can"></i> Delete all</button>
+        <button class="addNote"><i class="fa-regular fa-plus"></i> Add</button>
+        <button class="deleteAllNotes">
+          <i class="fa-regular fa-trash-can"></i> Delete all
+        </button>
       </div>
     </section>
 
-    <section class="notes-section">
-      <div class="note">
-        <div class="noteHeader">
-          <h2 class="noteTitle">Notatka1</h2>
-          <button><i class="fa-regular fa-circle-xmark"></i></button>
+    <div class="app-body">
+      <section class="notes-section">
+        <div class="note">
+          <div class="noteHeader">
+            <h2 class="noteTitle">Notatka1</h2>
+            <button><i class="fa-regular fa-circle-xmark"></i></button>
+          </div>
+          <p class="noteContent">
+            siupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiup
+          </p>
         </div>
-        <p class="noteContent">siupsiupsiupsiup</p>
-      </div>
-    </section>
 
-    <section class="note-menu-section">
-      <h2>Add a note</h2>
-      <label for="noteCategory">Choose a category:</label>
-      <input list="noteCategory" name="noteCategory" />
-      <datalist id="noteCategory">
-        <option value="Work"></option>
-        <option value="Home"></option>
-        <option value="Shopping"></option>
-        <option value="Hobby"></option>
-        <option value="Other"></option>
-      </datalist>
+        <div class="note">
+          <div class="noteHeader">
+            <h2 class="noteTitle">Notatka2</h2>
+            <button><i class="fa-regular fa-circle-xmark"></i></button>
+          </div>
+          <p class="noteContent">
+            siupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiupsiup
+          </p>
+        </div>
+      </section>
 
-      <label for="noteContent">Type your note text:</label>
-      <input type="text" id="noteContent" />
+      <section class="note-menu-section active">
+        <h2>Add a note</h2>
+        <label for="noteCategory">Choose a category or create your own:</label>
+        <input list="noteCategory" name="noteCategory" />
+        <datalist id="noteCategory">
+          <option value="Work"></option>
+          <option value="Home"></option>
+          <option value="Shopping"></option>
+          <option value="Hobby"></option>
+          <option value="Other"></option>
+        </datalist>
 
-      <p class="error">Fill all text areas</p>
+        <label for="noteText">Type your note text:</label>
+        <input type="text" id="noteText" />
 
-      <div class="btn-area">
-        <button><i class="fa-regular fa-floppy-disk"></i>Save</button>
-        <button><i class="fa-regular fa-circle-xmark"></i>Cancel</button>
-      </div>
-    </section>
+        <p class="error">Fill all text areas</p>
 
+        <div class="btn-area">
+          <button><i class="fa-regular fa-floppy-disk"></i> Save</button>
+          <button><i class="fa-regular fa-circle-xmark"></i> Cancel</button>
+        </div>
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
