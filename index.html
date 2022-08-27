@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticky notes 🗒️</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky notes 🗒️</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e451d23230.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="menu-section">
+      <h1 class="logo"><i class="fa-solid fa-note-sticky"></i>MyNotes</h1>
+      <div class="btn-area">
+        <button><i class="fa-regular fa-plus"></i> Add</button>
+        <button><i class="fa-regular fa-trash-can"></i> Delete all</button>
+      </div>
+    </section>
+
+    <section class="notes-section">
+      <div class="note">
+        <div class="noteHeader">
+          <h2 class="noteTitle">Notatka1</h2>
+          <button><i class="fa-regular fa-circle-xmark"></i></button>
+        </div>
+        <p class="noteContent">siupsiupsiupsiup</p>
+      </div>
+    </section>
+
+    <section class="note-menu-section">
+      <h2>Add a note</h2>
+      <label for="noteCategory">Choose a category:</label>
+      <input list="noteCategory" name="noteCategory" />
+      <datalist id="noteCategory">
+        <option value="Work"></option>
+        <option value="Home"></option>
+        <option value="Shopping"></option>
+        <option value="Hobby"></option>
+        <option value="Other"></option>
+      </datalist>
+
+      <label for="noteContent">Type your note text:</label>
+      <input type="text" id="noteContent" />
+
+      <p class="error">Fill all text areas</p>
+
+      <div class="btn-area">
+        <button><i class="fa-regular fa-floppy-disk"></i>Save</button>
+        <button><i class="fa-regular fa-circle-xmark"></i>Cancel</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
