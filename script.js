@@ -1,8 +1,19 @@
-const btnAdd = document.querySelector(".addNote")
-const noteMenu = document.querySelector(".note-menu-section")
+const btnAdd = document.querySelector(".addNote");
+const btnDeleteAll = document.querySelector(".deleteAllNotes");
+const notesSection = document.querySelector(".notes-section");
+const btnDelete = document.querySelectorAll(".deleteButton");
+const noteMenu = document.querySelector(".note-menu-section");
 
 const showSettings = () => {
-  noteMenu.classList.toggle("active")
-}
+  noteMenu.classList.toggle("active");
+};
 
-btnAdd.addEventListener("click", showSettings)
+const deleteNote = () => {};
+
+const deleteAllNotes = () => {
+  notesSection.textContent = "";
+};
+
+btnAdd.addEventListener("click", showSettings);
+btnDeleteAll.addEventListener("click", deleteAllNotes);
+btnDelete.addEventListener("click", deleteNote);

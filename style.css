@@ -113,10 +113,10 @@ body {
   padding: 1em;
   border: 2px black solid;
   background: white;
-  -webkit-transition: display .4s, -webkit-transform .4s;
-  transition: display .4s, -webkit-transform .4s;
-  transition: transform .4s, display .4s;
-  transition: transform .4s, display .4s, -webkit-transform .4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 #noteText {
@@ -126,6 +126,5 @@ body {
 .active {
   -webkit-transform: translateX(400px);
           transform: translateX(400px);
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */
