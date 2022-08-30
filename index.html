@@ -58,14 +58,14 @@
       <section class="note-menu-section active">
         <h2>Add a note</h2>
         <label for="noteCategory">Choose a category or create your own:</label>
-        <input list="noteCategory" name="noteCategory" />
-        <datalist id="noteCategory">
+        <input list="noteCategory" id="noteCategory" name="noteCategory" />
+        <!-- <datalist id="noteCategory">
           <option value="Work"></option>
           <option value="Home"></option>
           <option value="Shopping"></option>
           <option value="Hobby"></option>
           <option value="Other"></option>
-        </datalist>
+        </datalist> -->
 
         <label for="noteText">Type your note text:</label>
         <textarea id="noteText"></textarea>
@@ -73,8 +73,12 @@
         <p class="error">Fill all text areas</p>
 
         <div class="btn-area">
-          <button><i class="fa-regular fa-floppy-disk"></i> Save</button>
-          <button><i class="fa-regular fa-circle-xmark"></i> Cancel</button>
+          <button class="saveButton">
+            <i class="fa-regular fa-floppy-disk"></i> Save
+          </button>
+          <button class="cancelButton">
+            <i class="fa-regular fa-circle-xmark"></i> Cancel
+          </button>
         </div>
       </section>
     </div>
