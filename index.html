@@ -58,14 +58,14 @@
       <section class="note-menu-section active">
         <h2>Add a note</h2>
         <label for="noteCategory">Choose a category or create your own:</label>
-        <input list="noteCategory" id="noteCategory" name="noteCategory" />
-        <!-- <datalist id="noteCategory">
-          <option value="Work"></option>
-          <option value="Home"></option>
-          <option value="Shopping"></option>
-          <option value="Hobby"></option>
-          <option value="Other"></option>
-        </datalist> -->
+        <select id="noteCategory">
+          <option value="0" disabled selected></option>
+          <option value="1">Work</option>
+          <option value="1">Home</option>
+          <option value="1">Shopping</option>
+          <option value="1">Hobby</option>
+          <option value="1">Other</option>
+        </datalist>
 
         <label for="noteText">Type your note text:</label>
         <textarea id="noteText"></textarea>

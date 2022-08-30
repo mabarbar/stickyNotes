@@ -21,13 +21,25 @@ const deleteAllNotes = () => {
   notesSection.textContent = "";
 };
 
+const addNote = () => {
+  if (
+    noteText.value !== "" &&
+    noteCategory.options[noteCategory.selectedIndex].value !== "0"
+  ) {
+    saveNote();
+  } else {
+  }
+};
+
 const saveNote = () => {
   const newNote = document.createElement("div");
   newNote.setAttribute("ID", cardID);
   newNote.innerHTML = `
   <div class="note">
   <div class="noteHeader">
-    <h2 class="noteTitle">${noteCategory.value}</h2>
+    <h2 class="noteTitle">${
+      noteCategory.options[noteCategory.selectedIndex].textContent
+    }</h2>
     <button class="deleteButton">
       <i class="fa-regular fa-circle-xmark"></i>
     </button>
@@ -53,4 +65,4 @@ btnAdd.addEventListener("click", showSettings);
 btnCancel.addEventListener("click", showSettings);
 btnDeleteAll.addEventListener("click", deleteAllNotes);
 // btnDelete.addEventListener("click", deleteNote);
-btnSave.addEventListener("click", saveNote);
+btnSave.addEventListener("click", addNote);
