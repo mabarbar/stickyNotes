@@ -127,4 +127,12 @@ body {
   -webkit-transform: translateX(400px);
           transform: translateX(400px);
 }
+
+.red {
+  color: red;
+}
+
+i {
+  pointer-events: none;
+}
 /*# sourceMappingURL=style.css.map */

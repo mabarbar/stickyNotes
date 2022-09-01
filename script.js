@@ -1,6 +1,5 @@
 const btnAdd = document.querySelector(".addNote");
 const btnDeleteAll = document.querySelector(".deleteAllNotes");
-const btnDelete = document.querySelectorAll(".deleteButton");
 const btnSave = document.querySelector(".saveButton");
 const btnCancel = document.querySelector(".cancelButton");
 const notesSection = document.querySelector(".notes-section");
@@ -28,10 +27,12 @@ const addNote = () => {
     noteText.value !== "" &&
     noteCategory.options[noteCategory.selectedIndex].value !== "0"
   ) {
+    console.log(noteCategory.options[noteCategory.selectedIndex].value);
     saveNote();
   } else {
     errorMessage.textContent = "Please fill all text areas.";
     errorMessage.style.color = "red";
+    console.log(noteCategory.options[noteCategory.selectedIndex].value);
   }
 };
 
@@ -67,8 +68,17 @@ const resetSettings = () => {
   errorMessage.style.color = "black";
 };
 
+const deleteNote = (e) => {
+  console.log(e.target);
+  if (e.target.matches(".deleteButton")) {
+    const noteToDelete = e.target.closest(".note");
+    noteToDelete.remove();
+  }
+};
+
 btnAdd.addEventListener("click", showSettings);
 btnCancel.addEventListener("click", showSettings);
 btnDeleteAll.addEventListener("click", deleteAllNotes);
 // btnDelete.addEventListener("click", deleteNote);
 btnSave.addEventListener("click", addNote);
+notesSection.addEventListener("click", deleteNote);
