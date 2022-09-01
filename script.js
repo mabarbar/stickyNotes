@@ -8,11 +8,13 @@ const noteMenu = document.querySelector(".note-menu-section");
 
 const noteCategory = document.querySelector("#noteCategory");
 const noteText = document.querySelector("#noteText");
+const errorMessage = document.querySelector(".error");
 
 let cardID = 0;
 
 const showSettings = () => {
   noteMenu.classList.toggle("active");
+  resetSettings();
 };
 
 // const deleteNote = () => {console.log("si");};
@@ -28,6 +30,8 @@ const addNote = () => {
   ) {
     saveNote();
   } else {
+    errorMessage.textContent = "Please fill all text areas.";
+    errorMessage.style.color = "red";
   }
 };
 
@@ -59,6 +63,8 @@ const saveNote = () => {
 const resetSettings = () => {
   noteText.value = "";
   noteCategory.value = "";
+  errorMessage.textContent = "Fill all text areas";
+  errorMessage.style.color = "black";
 };
 
 btnAdd.addEventListener("click", showSettings);
