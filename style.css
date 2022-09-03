@@ -123,16 +123,28 @@ body {
   height: 250px;
 }
 
-.active {
-  -webkit-transform: translateX(400px);
-          transform: translateX(400px);
-}
-
 .red {
   color: red;
+  color: lightblue;
 }
 
 i {
   pointer-events: none;
+}
+
+.btn-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.color {
+  border: none;
+  background: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 /*# sourceMappingURL=style.css.map */

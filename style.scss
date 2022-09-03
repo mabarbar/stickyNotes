@@ -49,7 +49,7 @@ body {
   flex-direction: column;
   width: 200px;
   min-height: 200px;
-  background: yellow;
+  background: hsl(60, 100%, 50%);
   box-shadow: hsl(60, 80%, 50%) 20px 30px;
   margin: 2em;
 }
@@ -102,14 +102,27 @@ body {
 }
 
 .active {
-  transform: translateX(400px);
+  // transform: translateX(400px);
   // display: none;
 }
 
 .red {
   color: rgb(255, 0, 0);
+  color: hsl(195, 53%, 79%);
 }
 
 i {
   pointer-events: none;
+}
+
+.btn-area {
+  display: flex;
+  // align-items: flex-end;
+  justify-content: space-between;
+}
+
+.color {
+  border: none;
+  background: none;
+  align-self: flex-start;
 }
