@@ -123,6 +123,11 @@ body {
   height: 250px;
 }
 
+.active {
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
+}
+
 .red {
   color: red;
   color: lightblue;

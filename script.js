@@ -83,22 +83,27 @@ const checkColor = (note) => {
   switch (selectedValue) {
     case "Notatka":
       note.style.background = "hsl(60, 100%, 50%)";
-      note.style.box_shadow = "hsl(80, 50%, 50%)";
+      note.style.boxShadow = "hsl(60, 80%, 45%) 20px 30px";
       break;
     case "Work":
       note.style.background = "hsl(195, 53%, 79%)";
+      note.style.boxShadow = "hsl(195, 33%, 74%) 20px 30px";
       break;
     case "Home":
       note.style.background = "hsl(9, 100%, 64%)";
+      note.style.boxShadow = "hsl(9, 80%, 59%) 20px 30px";
       break;
     case "Shopping":
       note.style.background = "hsl(54, 77%, 75%)";
+      note.style.boxShadow = "hsl(54, 57%, 70%) 20px 30px";
       break;
     case "Hobby":
       note.style.background = "hsl(84, 100%, 59%)";
+      note.style.boxShadow = "hsl(84, 80%, 54%) 20px 30px";
       break;
     case "Other":
-      note.style.background = "hsl(0, 0%, 100%";
+      note.style.background = "hsl(0, 0%, 95%";
+      note.style.boxShadow = "hsl(0, 0%, 75%) 20px 30px";
       break;
   }
 };
