@@ -8,6 +8,9 @@ body {
   position: relative;
   background-color: hsl(0, 0%, 100%);
   font-family: "Nunito", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .menu-section {
